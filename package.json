@@ -5,10 +5,10 @@
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_dist/entry.js",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^3.9.3",
+    "hel-lib-proxy": "^3.10.2",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {

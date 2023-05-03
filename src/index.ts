@@ -1,5 +1,6 @@
 
 async function main() {
+  const { isMasterApp } = await import('hel-iso');
   const { libReady } = await import('hel-lib-proxy');
   // const { preFetchLib } = await import('hel-mico');
   const { LIB_NAME } = await import('./configs/subApp');
@@ -11,6 +12,12 @@ async function main() {
   const libProperties = await import('./entrance/libProperties');
   // 注意此处传递的是 default
   libReady(LIB_NAME, libProperties.default);
+
+  // 这里可根据自己的情况做调整或删除（仅为了本地启动模块时可以以web项目的形式做一些自定义验证逻辑），
+  // 被别的使用方载入当前模块时并不会触发 if 块里的逻辑
+  if (isMasterApp()) {
+    await import('./loadApp');
+  }
 };
 
 main().catch(console.error);

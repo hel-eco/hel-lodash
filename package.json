@@ -5,19 +5,20 @@
   "module": "hel_proxy_es/entry.js",
   "unpkg": "hel_proxy/entry.js",
   "types": "lib/entrance/libTypes.ts",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "dependencies": {
     "@types/lodash": "^4.14.182",
-    "hel-lib-proxy": "^4.5.1",
+    "hel-iso": "^4.3.2",
+    "hel-lib-proxy": "^4.7.0",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "hel-lib-proxy": "^4.5.1"
+    "hel-lib-proxy": "^4.7.0"
   },
   "scripts": {
     "postinstall": "node ./scripts/postinstall.js",
     "check": "node ./scripts/check",
-    "start": "cross-env HOST=localhost npm run app",
+    "start": "cross-env PORT=3000 npm run app",
     "app": "node scripts/start.js",
     "build": "npm run check_name && npm run build_dist && npm run build_meta && npm run build_proxy",
     "check_name": "node scripts/check.js",
@@ -70,7 +71,7 @@
     "eslint-loader": "3.0.3",
     "eslint-plugin-import": "2.20.1",
     "file-loader": "4.3.0",
-    "hel-dev-utils": "^4.2.5",
+    "hel-dev-utils": "^4.3.11",
     "html-webpack-plugin": "4.0.0-beta.11",
     "jest": "24.9.0",
     "jest-resolve": "24.9.0",

@@ -9,7 +9,7 @@ export const APP_GROUP_NAME = 'hlib-xxx'; /// 名字随意，和 package.json na
 ```
 
 - 改package.json
-将`hame`和`appGroupName`改为hel模块名(名字随意，保持一样即可)
+将`name`和`appGroupName`改为hel模块名(名字随意，保持一样即可)
 ```
   "name": "hlib-xxx",
   "appGroupName": "hlib-xxx",
